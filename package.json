@@ -5,7 +5,9 @@
   "main": "dist/pdf-annotate.js",
   "scripts": {
     "test": "karma start --single-run",
-    "start": "./scripts/web",
+    "start": "webpack-dev-server --inline --config ./webpack.web.js --content-base docs/",
+    "start:sandbox": "node scripts/sandbox.js && webpack-dev-server --inline --config ./webpack.sandbox.js --content-base sandbox/",
+    "prestart": "node scripts/shared.js",
     "build": "MINIFY=1 webpack",
     "coveralls": "cat coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js"
   },
