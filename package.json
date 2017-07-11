@@ -47,10 +47,11 @@
     "lolex": "^1.4.0",
     "mocha": "^2.4.5",
     "object-assign": "^4.0.1",
-    "pdfjs-dist": "1.4.162",
+    "pdfjs-dist": "1.8.188",
     "simulant": "^0.2.0",
     "sinon": "^1.17.3",
     "sinon-chai": "^2.8.0",
+    "shelljs": "~0.4.0",
     "twitter-text": "^1.13.4",
     "webpack": "1.12.14",
     "webpack-dev-server": "1.14.1"
