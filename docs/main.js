@@ -1,5 +1,6 @@
 import twitter from 'twitter-text';
 import PDFJSAnnotate from '../';
+import RestStoreAdapter from '../src/adapter/RestStoreAdapter'
 import initColorPicker from './shared/initColorPicker';
 
 const { UI } = PDFJSAnnotate;
@@ -12,7 +13,7 @@ let RENDER_OPTIONS = {
   rotate: parseInt(localStorage.getItem(`${documentId}/rotate`), 10) || 0
 };
 
-PDFJSAnnotate.setStoreAdapter(new PDFJSAnnotate.LocalStoreAdapter());
+PDFJSAnnotate.setStoreAdapter(new RestStoreAdapter());
 PDFJS.workerSrc = './shared/pdf.worker.js';
 
 // Render stuff

@@ -8,7 +8,8 @@
     "start": "webpack-dev-server --inline --config ./webpack.web.js --content-base docs/",
     "start:sandbox": "node scripts/sandbox.js && webpack-dev-server --inline --config ./webpack.sandbox.js --content-base sandbox/",
     "prestart": "node scripts/shared.js",
-    "build": "MINIFY=1 webpack",
+    "build": "webpack",
+    "build:index": "webpack --config ./webpack.web.js",
     "coveralls": "cat coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js"
   },
   "files": [

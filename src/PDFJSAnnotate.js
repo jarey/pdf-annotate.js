@@ -1,5 +1,6 @@
 import StoreAdapter from './adapter/StoreAdapter';
 import LocalStoreAdapter from './adapter/LocalStoreAdapter';
+//import RestStoreAdapter from './adapter/RestStoreAdapter';
 import render from './render';
 import UI from './UI';
 
@@ -14,6 +15,11 @@ export default {
    * Implementation of StoreAdapter that stores annotation data to localStorage.
    */
   LocalStoreAdapter,
+
+    /**
+     * Adapter for managing annotations working with a RestFul API.
+      */
+  //RestStoreAdapter,
 
   /**
    * Abstract instance of StoreAdapter
