@@ -8,7 +8,8 @@
     "start": "webpack-dev-server --inline --config ./webpack.web.js --content-base docs/",
     "start:sandbox": "node scripts/sandbox.js && webpack-dev-server --inline --config ./webpack.sandbox.js --content-base sandbox/",
     "prestart": "node scripts/shared.js",
-    "build": "webpack",
+    "build": "cross-env MINIFY=0 webpack",
+	"build:min": "cross-env MINIFY=1 webpack",
     "build:index": "webpack --config ./webpack.web.js",
     "coveralls": "cat coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js"
   },
@@ -55,7 +56,8 @@
     "shelljs": "~0.4.0",
     "twitter-text": "^1.13.4",
     "webpack": "1.12.14",
-    "webpack-dev-server": "1.14.1"
+    "webpack-dev-server": "1.14.1",
+	"cross-env": "5.0.1"
   },
   "dependencies": {
     "create-stylesheet": "^0.3.0",
